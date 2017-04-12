@@ -29,5 +29,11 @@ namespace DiyBeautyRecipes.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<DiyBeautyRecipes.Models.Recipe> Recipes { get; set; }
+
+        public System.Data.Entity.DbSet<DiyBeautyRecipes.Models.BodyPart> BodyParts { get; set; }
+
+        
     }
 }

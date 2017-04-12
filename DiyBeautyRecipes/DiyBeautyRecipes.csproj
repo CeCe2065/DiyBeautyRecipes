@@ -189,14 +189,27 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BodyPartsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RecipesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704111915322_InitialCreate.cs" />
+    <Compile Include="Migrations\201704111915322_InitialCreate.Designer.cs">
+      <DependentUpon>201704111915322_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704112109560_FixedRecipe.cs" />
+    <Compile Include="Migrations\201704112109560_FixedRecipe.Designer.cs">
+      <DependentUpon>201704112109560_FixedRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BodyPart.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Recipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -257,6 +270,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\BodyParts\Create.cshtml" />
+    <Content Include="Views\BodyParts\Delete.cshtml" />
+    <Content Include="Views\BodyParts\Details.cshtml" />
+    <Content Include="Views\BodyParts\Edit.cshtml" />
+    <Content Include="Views\BodyParts\Index.cshtml" />
+    <Content Include="Views\Mixtures\Create.cshtml" />
+    <Content Include="Views\Mixtures\Delete.cshtml" />
+    <Content Include="Views\Mixtures\Details.cshtml" />
+    <Content Include="Views\Mixtures\Edit.cshtml" />
+    <Content Include="Views\Mixtures\Index.cshtml" />
+    <Content Include="Views\Recipes\Create.cshtml" />
+    <Content Include="Views\Recipes\Delete.cshtml" />
+    <Content Include="Views\Recipes\Details.cshtml" />
+    <Content Include="Views\Recipes\Edit.cshtml" />
+    <Content Include="Views\Recipes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,6 +303,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704111915322_InitialCreate.resx">
+      <DependentUpon>201704111915322_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704112109560_FixedRecipe.resx">
+      <DependentUpon>201704112109560_FixedRecipe.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
